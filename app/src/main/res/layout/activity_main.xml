@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/filter">
+
+
+        <TextView
+            android:id="@+id/nofilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Filter"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/filter_unselected"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/hightolow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High to Low"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/filter_unselected"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/lowtohigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low to High"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/filter_unselected"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/recyclerView"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@id/filter"
+       android:layout_marginTop="5dp"
+       android:padding="10dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="addbtn"
+        android:src="@drawable/add"
+        android:backgroundTint="#fb6f92"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"/>
+
+</RelativeLayout>
